@@ -110,14 +110,14 @@ class Place extends BaseObject {
 	}
 
 	/**
-	 * @return the $zip_code
+	 * @return the $zipCode
 	 */
 	public function getZipCode() {
 		return $this->zipCode;
 	}
 
 	/**
-	 * @param number $zip_code
+	 * @param number $zipCode
 	 */
 	public function setZipCode($zipCode) {
 		$this->zipCode = $zipCode;
@@ -151,10 +151,6 @@ class Place extends BaseObject {
 		$this->country = $country;
 	}
 
-	
-	
-	
-	
 }
 
 ?>
