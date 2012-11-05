@@ -23,3 +23,20 @@ REQUEST_URI=/site/testdrive/
 in C:\Users\Hervé\Dropbox\DinSoc\Dev\web\site\testdrive\protected\views\layouts\main.php (50)
 in C:\Users\Hervé\Dropbox\DinSoc\Dev\web\site\testdrive\protected\views\layouts\column1.php (5)
 in C:\Users\Hervé\Dropbox\DinSoc\Dev\web\site\testdrive\protected\controllers\SiteController.php (32)
+2012/11/05 01:25:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('place/admin')
+#9 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\site\testdrive\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/site/testdrive/index.php?r=place/admin
+HTTP_REFERER=http://127.0.0.1:82/site/testdrive/index.php?r=site/login
+---
