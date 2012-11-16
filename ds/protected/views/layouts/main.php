@@ -12,8 +12,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 	<!-- You can also compile style.less to use regular css. Your apps will still work. -->
 	<style type="text/css">body{padding-top:60px}.hidden{margin:20px;border:5px solid #a24c4c;background-color:red;padding:10px;width:400px;color:white;font-family:helvetica,sans-serif}</style>
-	<link rel="stylesheet/less" type="text/css" href="assets/kickstrap.less">
-	<script src="assets/Kickstrap/js/less-1.3.0.min.js"></script>
+	<link rel="stylesheet/less" type="text/css" href="kickstrap.less">
+	<script src="Kickstrap/js/less-1.3.0.min.js"></script>
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
@@ -27,6 +27,25 @@
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 <!--! END KICKSTRAP HEADER --> 
+   
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/ds/index.php">Dining Social</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/ds/index.php?r=authority">Authority</a></li>
+              <li><a href="/ds/index.php?r=place">Place</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
 
 
@@ -38,7 +57,7 @@
 
 
 
-<p>Hello World</p>
+<?php echo $content; ?>
 
 
 
@@ -55,10 +74,10 @@
 	  <p>Built with <a href="http://getkickstrap.com">Kickstrap</a></p>
   </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="assets/Kickstrap/js/jquery-1.8.2.min.js"><\/script>');</script>
+  <script>window.jQuery || document.write('<script src="Kickstrap/js/jquery-1.8.2.min.js"><\/script>');</script>
   <!-- Kickstrap CDN thanks to our friends at netDNA.com -->
   <script id="appList" src="http://netdna.getkickstrap.com/1.2/Kickstrap/js/kickstrap.min.js"></script>
-  <script>window.consoleLog || document.write('<script id="appList" src="assets/Kickstrap/js/kickstrap.min.js"><\/script>')</script>
+  <script>window.consoleLog || document.write('<script id="appList" src="Kickstrap/js/kickstrap.min.js"><\/script>')</script>
   <script>
    ks.ready(function() {
       // JavaScript placed here will run only once Kickstrap has loaded successfully.
