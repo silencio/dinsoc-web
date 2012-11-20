@@ -15,6 +15,18 @@
 	<link rel="stylesheet/less" type="text/css" href="kickstrap.less">
 	<script src="Kickstrap/js/less-1.3.0.min.js"></script>
 	
+	  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyA7PCfSIn5fRe7ZQBpmqe-piuRei1LwNGo&sensor=true"></script>
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	  <script>window.jQuery || document.write('<script src="Kickstrap/js/jquery-1.8.2.min.js"><\/script>');</script>
+	  <!-- Kickstrap CDN thanks to our friends at netDNA.com -->
+	  <script id="appList" src="http://netdna.getkickstrap.com/1.2/Kickstrap/js/kickstrap.min.js"></script>
+	  <script>window.consoleLog || document.write('<script id="appList" src="Kickstrap/js/kickstrap.min.js"><\/script>')</script>
+	  <script>
+	   ks.ready(function() {
+	      // JavaScript placed here will run only once Kickstrap has loaded successfully.
+	   });
+	  </script>
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
 </head>
@@ -36,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/ds/index.php">Dining Social</a>
+          <a class="brand" href="/ds/index.php"><?php echo CHtml::encode(Yii::app()->name); ?></a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="/ds/index.php?r=authority">Authority</a></li>
@@ -73,20 +85,6 @@
   <footer class="container" id="footer">
 	  <p>Built with <a href="http://getkickstrap.com">Kickstrap</a></p>
   </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="Kickstrap/js/jquery-1.8.2.min.js"><\/script>');</script>
-  <!-- Kickstrap CDN thanks to our friends at netDNA.com -->
-  <script id="appList" src="http://netdna.getkickstrap.com/1.2/Kickstrap/js/kickstrap.min.js"></script>
-  <script>window.consoleLog || document.write('<script id="appList" src="Kickstrap/js/kickstrap.min.js"><\/script>')</script>
-  <script>
-   ks.ready(function() {
-      // JavaScript placed here will run only once Kickstrap has loaded successfully.
-      $.pnotify({
-         title: 'Hello World',
-         text: 'To edit this message, find me at the bottom of this HTML file.'
-      });
-   });
-  </script>
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
   <!--script>
