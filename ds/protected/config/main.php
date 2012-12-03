@@ -42,11 +42,13 @@ return array(
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
-			'urlFormat'=>'path',
+			//'urlFormat'=>'path',
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'place/nearby/ll/<lat>,<lng>'=>'place/nearby'
+				//'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				//'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				//'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				//'place/nearby/ll/<lat>,<lng>'=>'place/nearby'
 			),
 		),
 		*/
@@ -62,6 +64,7 @@ return array(
 			'username' => 'root',
 			'password' => 'p0ppyj4ne',
 			'charset' => 'utf8',
+			'enableProfiling' => true,
 		),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
@@ -73,6 +76,11 @@ return array(
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
+				),
+				array(
+					'class'=>'CFileLogRoute',
+					'levels'=>'trace',
+					'categories'=>'system.db.*',
 				),
 				// uncomment the following to show log messages on web pages
 				/*
