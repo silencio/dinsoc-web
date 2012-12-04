@@ -1,0 +1,29 @@
+2012/11/05 01:11:43 [error] [exception.CDbException] SQLSTATE[HY000] [14] unable to open database file
+2012/11/05 01:11:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\db\CDbConnection.php:388
+Stack trace:
+#0 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Post))
+#7 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Post')
+#8 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\demos\blog\protected\controllers\PostController.php(132): CActiveDataProvider->__construct('Post', Array)
+#9 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\actions\CInlineAction.php(50): PostController->actionIndex()
+#10 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CWebApplication.php(276): CController->run('')
+#19 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#20 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\Users\Hervé\Dropbox\DinSoc\Dev\web\engine\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/engine/yii/demos/blog/
+HTTP_REFERER=http://127.0.0.1:82/engine/yii/demos/
+---

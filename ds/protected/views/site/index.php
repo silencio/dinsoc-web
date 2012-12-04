@@ -117,10 +117,16 @@ $(function(){
 		refMarker.setAnimation(google.maps.Animation.DROP)
 		map.setCenter(pos);
 		getLatLng();
+		$.getJSON('http://localhost:3000/place/nearby/ll/'+pos.lat()+','+pos.lng(), function(placesData, textStatus){
+			showPlaces(placesData);
+			//autoZoom();
+		});
+		/*
 		$.getJSON('/ds/index.php?r=place/nearby/ll/'+pos.lat()+','+pos.lng(), function(placesData, textStatus){
 			showPlaces(placesData);
 			//autoZoom();
 		});
+		*/
 	}
 
 	function showMeZone(zone){
@@ -140,10 +146,16 @@ $(function(){
 		if(!/^\s*[0-9]+\s*$/.test(zone)){
 			return;
 		}
+		$.getJSON('http://localhost:3000/place/area/zip/'+zone, function(placesData, textStatus){
+			showPlaces(placesData);
+			//autoZoom();
+		});
+		/*
 		$.getJSON('/ds/index.php?r=place/zone/zip/'+zone, function(placesData, textStatus){
 			showPlaces(placesData);
 			//autoZoom();
 		});
+		*/
 	}
 
 	function showPlaces(_placesData){
@@ -153,7 +165,7 @@ $(function(){
 			}
 		}
 		placesData = _placesData;
-		var maxProviders = placesData['maxProviders'];
+		var maxProviders = placesData['providers'].length;
 		var places = placesData['data'];
 		autoZoom();
 		placesMarkers = [];
@@ -176,7 +188,7 @@ $(function(){
 		var marker = new google.maps.Marker({map: map, title: place.name});
 		var opacity=.2;
 		if(place.providers){
-			opacity += .8*place.providers.split('+').length/maxProviders
+			opacity += .8*place.providers.length/maxProviders
 		}
 		marker.setIcon({
 			path: google.maps.SymbolPath.CIRCLE,
